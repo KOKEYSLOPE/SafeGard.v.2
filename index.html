@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing and Scam Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="container" id="registerContainer">
+        <h1>Register Your Mobile Number</h1>
+        <form id="registerForm">
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber" required pattern="[0-9]{10}">
+            <button type="submit"><i class="fa fa-user-plus"></i> Register</button>
+        </form>
+    </div>
+    <div class="container" id="scanContainer" style="display: none;">
+        <h1>Message Scanner</h1>
+        <form id="messageForm">
+            <label for="message">Enter the message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit"><i class="fa fa-search"></i> Check Message</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <div class="container" id="notificationContainer" style="display: none;">
+        <h1>Notification</h1>
+        <p id="notificationMessage"></p>
+        <button id="acknowledgeButton"><i class="fa fa-check"></i> Acknowledge</button>
+        <button id="emailButton"><i class="fa fa-envelope"></i> Send to Email</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
